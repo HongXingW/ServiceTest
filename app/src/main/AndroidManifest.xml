@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.whx.servicetest" >
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.PERMISSION.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.PERMISSION.SET_WALLPAPER"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".StartServiceTest">
+
+        </activity>
+        <activity android:name=".BindServiceTest">
+
+        </activity>
+        <activity android:name=".IntentServiceTest">
+
+        </activity>
+        <activity android:name=".AidlClient">
+
+        </activity>
+        <activity android:name=".TelephonyStatus">
+
+        </activity>
+        <activity android:name=".MonitorPhone"/>
+        <activity android:name=".BlockMain"/>
+        <activity android:name=".SendSms"/>
+        <activity android:name=".AlarmTest"/>
+        <activity android:name=".AlarmActivity"/>
+        <activity android:name=".AlarmChangeWallpaper"/>
+
+        <service android:name=".MyIntentService">
+
+        </service>
+        <service android:name=".ChangeService"/>
+        <service android:name=".FirstService">
+            <intent-filter>
+                <action android:name="com.whx.service.FIRST_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:name=".BindService">
+            <intent-filter>
+                <action android:name="com.whx.service.BIND_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service android:name=".AidlService">
+            <intent-filter>
+                <action android:name="com.whx.service.AIDL_SERVICE"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
